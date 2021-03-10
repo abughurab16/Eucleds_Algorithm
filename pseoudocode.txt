@@ -1,0 +1,13 @@
+Start Program
+function called euclidean that takes 2 integer arguements:
+    declare an integer GCF that will be returned after the function completes
+    while the two given integer values are not equal:
+        check which one is larger:
+            continously subtract the larger value from the smaller value till they are equal
+            give GCF the value of either one of the integer end results
+            exit with status 0;
+    if they are equal:
+        give GCF the value of either one of the integer values and return it
+        exit with status 0;
+
+call euclidean(n1,n2);
