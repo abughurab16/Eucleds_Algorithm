@@ -1,12 +1,19 @@
 package Eucledian_Algorithm
 
-import (
-   "maths"
-)
   
+// defining our own abs function since go's default works with float types
 
-func eucleids(n1, n2 float64) float64 {
-   n1, n2 := math.Abs(n1). math.Abs(n2)
+func abs(a int) {
+   if a < 0 {
+      a = -a
+   }
+    
+   return a
+}
+
+func eucleids(n1, n2 int) int {
+   n1 := abs(n1)
+   n2 := abs(n2)
    
    for {
       // terminate early if they have equal values 
@@ -21,6 +28,7 @@ func eucleids(n1, n2 float64) float64 {
       }
       
    }
+   
    // either n1 or n2 will work :)
    return n1
 }
