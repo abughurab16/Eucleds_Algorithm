@@ -18,6 +18,8 @@ fn eucledian_sub(n1_ int, n2_ int) int {
 			n2 = n2 - n1
 		}
 	}
+	
+	return n1
 }
 
 fn eucledian_mod(n1_ int, n2_ int) int {
