@@ -1,4 +1,4 @@
-module eucleidan
+module eucledian
 
 fn abs(a int) int {
 	if a < 0 {
