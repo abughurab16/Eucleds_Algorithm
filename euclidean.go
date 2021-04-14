@@ -1,41 +1,38 @@
-package Eucledian_Algorithm
+module eucleidan
 
-  
-// defining our own abs function since go's default works with float types
-
-func abs(a int) {
-   if a < 0 {
-      a = -a
-   }
-    
-   return a
-}
-
-func eucleidSub(n1, n2 int) int {
-   n1 := abs(n1)
-   n2 := abs(n2)
-   
-  // loop until both values are equal
-  for n1 != n2 {
-    
-    if n1 > n2 {
-      n1 = n1 - n2
-    } else {
-      n2 = n2 - n1
+fn abs (a int) (int) {
+    if a < 0 {
+    	return -a
     }
-    
-  }
-   // either n1 or n2 will work :)
-   return n1
+    return a
 }
 
-func eucleidMod(n1, n2 int) int {
-  n1 := abs(n1)
-  n2 := abs(n2)
-  
-  for n2 != 0 {
-    a,b = b, a%b
-  }
-  
-  return a
+fn eucledian_sub(n1_ int, n2_ int) (int) {
+    mut n1 := abs(n1_)
+    mut n2 := abs(n2_)
+    
+    for n1 != n2 {
+        if n1 < n2 {
+        	n1 = n1 - n2
+        } else {
+        	n2 = n2 - n1
+        }
+    }
+}
+
+fn eucledian_mod( n1_ int,  n2_ int) (int) {
+    mut n1 := abs(n1_)
+    mut n2 := abs(n2_)
+    
+    for n2 != 0 {
+    	n2,n1 = n1%n2, n2
+    }
+	
+    return n1
+}
+
+
+fn main(){
+    testing := eucledian_algo(55,320)
+    println(testing)
 }
