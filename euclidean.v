@@ -1,4 +1,4 @@
-module eucledian
+module eucledian 
 
 fn abs(a int) int {
 	if a < 0 {
@@ -32,6 +32,7 @@ fn eucledian_mod(n1_ int, n2_ int) int {
 }
 
 fn main() {
-	testing := eucledian_algo(55, 320)
+	test1 := eucledian_mod(55, 320)
+	test2 := eucledian_sub(33,60)
 	println(testing)
 }
